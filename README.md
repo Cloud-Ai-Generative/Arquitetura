@@ -1,7 +1,7 @@
 
 ## 🏗️ Arquiteturas
 
-- [Arquiteturas de Solução](./arquitetura-solucao.md)
-- [Arquiteturas de Sistemas](./arquitetura-sistemas.md)
-- [Arquitetura de Software](./arquitetura-software.md)
+- [Arquiteturas de Solução](arq-sol/arquitetura-solucao.md)
+- [Arquiteturas de Sistemas](arq-sis/arquitetura-sistemas.md)
+- [Arquitetura de Software](arq-sof/arquitetura-software.md)
 
