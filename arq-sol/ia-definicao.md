@@ -1,4 +1,8 @@
 # 🧠 Inteligência Artificial - Guia Rápido
+Arquitetura:
+
+
+![Arquitetura AWS Bedrock](images/IA.jpg)
 
 ## 📋 O que é?
 
