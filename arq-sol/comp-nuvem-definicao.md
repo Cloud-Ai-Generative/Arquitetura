@@ -1,4 +1,5 @@
 *[← Voltar ao Guia Anterior](./computacao-nuvem.md)*
+
 📋 O que é?
 Computação em nuvem (Cloud Computing) é o modelo de entrega de recursos de TI sob demanda pela internet, permitindo que empresas e pessoas acessem servidores, armazenamento, bancos de dados, redes, software e outras ferramentas sem precisar comprar, manter ou gerenciar infraestrutura física própria.
 
