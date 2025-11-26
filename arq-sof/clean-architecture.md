@@ -39,11 +39,12 @@ Clean Architecture é um padrão arquitetural proposto por Robert C. Martin (Unc
 - Facilita equipes grandes (times podem trabalhar em camadas diferentes)
 
 🔥 Estrutura típica de pastas (exemplo em projetos reais)
+```plaintext
 src/
-├── domain/              → Entities + interfaces de repositórios
-├── application/         → Use cases + DTOs de entrada/saída
-├── infrastructure/      → Implementações (repos com TypeORM, Prisma, etc.)
-└── interfaces/          → Controllers, middlewares, presenters (REST, CLI, etc.)
+├── domain/          → Entities + interfaces de repositórios
+├── application/     → Use cases + DTOs de entrada/saída
+├── infrastructure/  → Implementações (repos com TypeORM, Prisma, etc.)
+└── interfaces/      → Controllers, middlewares, presenters (REST, CLI, etc.)
 
 ⚙️ Tecnologias que combinam muito bem
 - Linguagens: TypeScript, Java, Kotlin, C#, Go, Python, Dart
