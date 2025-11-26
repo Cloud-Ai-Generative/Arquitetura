@@ -45,7 +45,6 @@ Banco de dados, APIs externas, filas, e-mail, cache, etc.
 
 🔥 Estrutura típica de pastas (2025)
 
-```plaintext
 src/
 ├── application/         → Use cases + ports de entrada
 ├── domain/              → Entities, Value Objects, Domain Services, Domain Events
