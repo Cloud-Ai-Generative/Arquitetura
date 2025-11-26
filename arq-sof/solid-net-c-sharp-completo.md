@@ -1,11 +1,5 @@
 *[← Voltar ao Guia Anterior](./solid.md)*
 
-Aqui está o seu `solid.md` **versão definitiva e completa** com **exemplos reais, executáveis e usados em projetos .NET corporativos em 2025**. Tudo 100% formatado, com contexto de domínio real (e-commerce) e código que você pode copiar e rodar.
-
-```markdown
-📋 O que é?
-SOLID é o conjunto de 5 princípios de design OO criado por Uncle Bob. É a base de todo código limpo, testável e durável — especialmente em .NET.
-
 Domínio do exemplo: **Sistema de Pedidos de uma Loja Online**
 
 ### S — Single Responsibility Principle (Responsabilidade Única)
