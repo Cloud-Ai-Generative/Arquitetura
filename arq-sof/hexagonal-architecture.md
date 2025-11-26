@@ -46,7 +46,7 @@ Banco de dados, APIs externas, filas, e-mail, cache, etc.
 - Ideal para evoluir o sistema por décadas
 
 🔥 Estrutura típica de pastas (2025)
-
+```plaintext
 src/
 ├── application/         → Use cases + ports de entrada
 ├── domain/              → Entities, Value Objects, Domain Services, Domain Events
@@ -54,6 +54,7 @@ src/
 └── adapters/
     ├── inbound/         → Controllers REST, GraphQL, gRPC, CLI, mensageria
     └── outbound/        → Repositórios, clients HTTP, mensageria, etc.
+```    
 ⚡ Frameworks que amam Hexagonal
 
 Java/Kotlin → Spring Boot, Quarkus, Micronaut
