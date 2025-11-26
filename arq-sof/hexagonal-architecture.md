@@ -1,4 +1,5 @@
 📋 O que é?
+
 Hexagonal Architecture (também chamada de Ports and Adapters) é um padrão arquitetural criado por Alistair Cockburn em 2005. A ideia principal é isolar a lógica de negócio (o núcleo da aplicação) de tudo que é externo: UI, banco de dados, APIs, filas, frameworks, etc.  
 
 O aplicativo fica no centro (hexágono) e se comunica com o mundo externo apenas através de **portas** (interfaces) que são implementadas por **adaptadores**.
