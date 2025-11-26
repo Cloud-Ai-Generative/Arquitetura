@@ -1,32 +1,41 @@
 *[← Voltar ao Guia Anterior](./arquitetura-software.md)*
 
-🔥 DDD vs Clean Architecture – Qual a diferença real?
+🔥 # DDD vs Clean Architecture vs Hexagonal — Qual a diferença real?
 
-| Aspecto                      | Domain-Driven Design (DDD)                          | Clean Architecture (Uncle Bob)                      |
-|------------------------------|-----------------------------------------------------|------------------------------------------------------|
-| Foco principal               | O **domínio do negócio** e sua complexidade        | **Separação de responsabilidades** e independência técnica |
-| Origem / Autor               | Eric Evans (2003)                                   | Robert C. Martin (Uncle Bob) – 2012                  |
-| Quando brilha mais           | Domínios complexos e ricos (logística, finanças, saúde, seguros) | Qualquer sistema que precisa ser testável e durável |
-| Escopo                       | Abordagem completa: modelagem, linguagem, contexto, arquitetura tática e estratégica | Padrão arquitetural (camadas + regra da dependência) |
-| Obriga Bounded Context?      | Sim, é conceito central                             | Não exige (mas combina muito bem)                    |
-| Obriga Entities/VO/Aggregates? | Sim, são building blocks fundamentais              | Não exige (você pode usar anêmico ou outro modelo)   |
-| Camadas                      | Geralmente 4 camadas muito parecidas com Clean, mas o nome e o foco mudam um pouco | 4 camadas fixas: Entities → Use Cases → Interface Adapters → Frameworks & Drivers |
-| Regra de dependência         | Existe, mas é menos rígida que na Clean             | Regra de ouro: dependências só apontam para dentro   |
-| Ubiquitous Language          | Conceito central e obrigatório                      | Não é mencionado (mas é boa prática usar)            |
-| Domain Events                | Pilar importante do DDD tático e estratégico        | Opcional (muitos projetos Clean usam também)         |
-| Pode viver sem o outro?      | Sim. Você pode fazer DDD com Hexagonal, Onion, etc. | Sim. Você pode fazer Clean com modelo anêmico ou CRUD |
-| Combinação mais comum em 2025| DDD + Clean Architecture (quase padrão em sistemas corporativos grandes) | Clean Architecture com ou sem DDD                   |
+| Critério                          | Domain-Driven Design (DDD)                         | Clean Architecture (Uncle Bob)                     | Hexagonal Architecture (Ports & Adapters)          |
+|-----------------------------------|----------------------------------------------------|----------------------------------------------------|----------------------------------------------------|
+| Autor / Ano                       | Eric Evans – 2003                                  | Robert C. Martin – 2012                            | Alistair Cockburn – 2005                           |
+| Tipo                              | Abordagem completa de modelagem + arquitetura     | Padrão arquitetural (camadas concêntricas)         | Padrão arquitetural (portas e adaptadores)         |
+| Foco principal                    | **Domínio complexo** e Ubiquitous Language        | **Separação de responsabilidades** e independência| **Isolamento do núcleo** via portas e adaptadores |
+| Obriga modelagem rica (Entities, VO, Aggregates)? | Sim, é o coração do DDD                          | Não (pode usar modelo anêmico se quiser)           | Não (mas quase todo mundo usa com DDD)             |
+| Obriga Bounded Context?           | Sim, conceito central                              | Não exige                                          | Não exige                                          |
+| Obriga Domain Events?             | Muito recomendado (estratégico e tático)           | Opcional                                           | Opcional                                           |
+| Regra de dependência              | Existe, mas menos rígida                           | Regra de ouro: só para dentro                      | Regra forte: núcleo não conhece o mundo externo    |
+| Camadas / Organização             | Geralmente 4 camadas (muito parecida com Clean)    | 4 círculos fixos (Entities → Use Cases → Adapters → Frameworks) | Núcleo + Ports (entrada/saída) + Adapters          |
+| Nome das portas/interfaces        | Repositories, Services, etc.                       | Interface Adapters (gateways, presenters)          | Driving Ports (entrada) e Driven Ports (saída)     |
+| Como os adaptadores são chamados  | Não padronizado (varia)                            | Interface Adapters                                 | Driving Adapters (primários) e Driven Adapters (secundários) |
+| Estrutura de pastas típica 2025   | `domain/`, `application/`, `infrastructure/`       | `entities/`, `use-cases/`, `interface-adapters/`, `frameworks-drivers/` | `application/`, `domain/`, `ports/`, `adapters/inbound/` e `outbound/` |
+| É possível usar sem os outros?    | Sim                                                | Sim                                                | Sim                                                |
+| Combinação mais comum hoje        | DDD + Clean OU DDD + Hexagonal                     | Clean (com ou sem DDD)                             | Hexagonal (quase sempre com DDD)                   |
+| Frase que resume                  | “O software deve falar a linguagem do negócio”    | “Dependências apontam para dentro”                 | “O núcleo não sabe quem está do lado de fora”      |
 
-🎯 Resumo prático (regra de bolso)
+### Resumo prático (regra de bolso 2025)
 
-- Se o seu domínio é **simples/CRUD** → Use Clean Architecture (ou até algo mais leve). DDD seria overkill.
-- Se o domínio é **complexo e as regras de negócio são o coração do sistema** → Use DDD + Clean Architecture juntos.
-- Na prática hoje: a maioria dos projetos corporativos sérios usa **os dois ao mesmo tempo**:
-  - Clean Architecture define as camadas e a regra da dependência.
-  - DDD define como modelar o domínio dentro da camada mais interna (Entities, Aggregates, Domain Events, Ubiquitous Language).
+| Situação                                      | Melhor escolha                                   |
+|-----------------------------------------------|--------------------------------------------------|
+| CRUD simples ou MVP                           | Clean ou Hexagonal puro (DDD seria overkill)     |
+| Domínio simples, mas quero código limpo       | Clean Architecture                               |
+| Domínio complexo (regras ricas, longa vida)   | DDD + Clean **OU** DDD + Hexagonal               |
+| Equipe Java/Spring ou .NET grande             | DDD + Clean (padrão corporativo)                 |
+| Equipe TypeScript/NestJS ou Kotlin            | DDD + Hexagonal (NestJS incentiva isso)          |
+| Preciso trocar banco/UI/tecnologia com frequência | Hexagonal (mais explícita nas portas)           |
 
-Resultado: código extremamente testável, durável, compreensível pelo negócio e que envelhece muito bem.
+### Conclusão que 99% dos arquitetos sérios usam hoje
+Na prática em 2025, **as três coisas andam juntas**:
 
-💡 Frase que resume tudo
-“Clean Architecture te diz ONDE colocar as coisas.  
-DDD te diz COMO modelar as coisas que vão dentro da camada mais importante.”
+1. **Hexagonal ou Clean** → definem a estrutura de camadas/pastas e a regra de dependência  
+2. **DDD** → define COMO modelar a camada mais interna (Entities, Aggregates, Domain Events, Ubiquitous Language)
+
+Resultado: sistemas corporativos extremamente testáveis, manuteníveis por décadas e que o time de negócio realmente entende.
+
+Escolha o nome que sua equipe preferir — o importante é aplicar os princípios certos.
