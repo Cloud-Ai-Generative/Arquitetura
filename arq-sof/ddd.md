@@ -1,4 +1,5 @@
 *[← Voltar ao Guia Anterior](./arquitetura-software.md)*
+
 📋 O que é?
 Domain-Driven Design (DDD) é uma abordagem de desenvolvimento de software criada por Eric Evans que coloca o domínio do negócio (o “problema real” que o sistema resolve) no centro de todo o projeto. O código deve refletir a linguagem, as regras e os processos do negócio — falados pelos especialistas do domínio (médicos, contadores, operadores logísticos, etc.).
 
