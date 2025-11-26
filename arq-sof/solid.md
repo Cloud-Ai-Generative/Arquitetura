@@ -2,8 +2,8 @@
 
 📋 O que é?
 SOLID é um acrônimo criado por Robert C. Martin (Uncle Bob) que reúne **cinco princípios de design orientado a objetos** cuja aplicação torna o código mais compreensível, flexível, manutenível e preparado para mudanças.
-- [⚙️ **Na prática com .NET C#**](./solid-net-c-sharp.md)
-
+- [⚙️ **Na prática com .NET C# mais simples**](./solid-net-c-sharp.md)
+- [⚙️ **Na prática com .NET C# mais completo**](./solid-net-c-sharp-completo.md)
 🔠 Os 5 princípios
 
 - **S** — **Single Responsibility Principle** (Princípio da Responsabilidade Única)  
