@@ -160,6 +160,3 @@ SOLID não é opcional — é a **base de tudo** que veio depois (Clean, Hexagon
 Em 2025, quem não domina SOLID ainda está no nível júnior/médio.  
 Domine esses 5 princípios e você vai escrever código que envelhece como vinho.
 ```
-
-Pode colar direto no seu `solid.md` — vai ficar perfeito ao lado dos outros arquivos!  
-Se quiser também a versão com exemplos em **TypeScript/NestJS** ou **Java/Spring**, é só pedir!
