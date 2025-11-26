@@ -56,9 +56,10 @@ src/
     └── outbound/        → Repositórios, clients HTTP, mensageria, etc.
 ```    
 ⚡ Frameworks que amam Hexagonal
-
+```plaintext
 Java/Kotlin → Spring Boot, Quarkus, Micronaut
 .NET → Minimal APIs + Carter/MediatR
 TypeScript → NestJS (modo “standard” ou “monolith”), Ts.ED
 Go → padrão da comunidade (chi, gin, fiber)
 Python → FastAPI + clean architecture packages
+```
