@@ -34,7 +34,7 @@ Banco de dados, APIs externas, filas, e-mail, cache, etc.
 - **Portas de Saída** (Driven Ports)  
   Interfaces que o núcleo define e que os adaptadores de saída implementam.  
   Ex: `UserRepositoryPort`, `PaymentGatewayPort`, `NotificationPort`
-
+```
 🔧 Adaptadores (Adapters)
 - **Primários / Driving** → REST controllers, CLI, testes, consumidores de mensagens
 - **Secundários / Driven** → Repositórios JPA, clientes HTTP, produtores Kafka, etc.
