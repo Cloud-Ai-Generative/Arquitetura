@@ -1,8 +1,8 @@
-*[← Voltar ao Guia Anterior](./computacao-nuvem.md*
+[← Voltar ao Guia Anterior](./computacao-nuvem.md)
 
 Desenho de solução:
 
-![Arquitetura Multi-Cloud(images/arq-multi-cloud.jpg)
+![Arquitetura Multi-Cloud](images/arq-multi-cloud.jpg)
 
 # ☁️📊 Explicação sobre o Desenho de Solução Multi-cloud
 
