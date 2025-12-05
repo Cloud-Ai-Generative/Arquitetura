@@ -1,4 +1,4 @@
-*[← Voltar ao Guia Anterior](./computacao-nuvem.md)*
+[← Voltar ao Guia Anterior](./computacao-nuvem.md)*
 
 📋 O que é?  
 
@@ -62,6 +62,3 @@ Frase que todo arquiteto de 2025 tem na cabeça
 
 Em 2025, toda empresa que fatura acima de R$ 500M/ano ou tem operação global já tem pelo menos uma estratégia multi-cloud ativa ou em piloto.
 ```
-
-Pode colar direto no seu `multi-cloud.md` — fica perfeito na sequência com Cloud Computing, Clean Architecture, Python, etc.  
-Quer também Hybrid Cloud ou Cloud Native no mesmo estilo? É só pedir!
