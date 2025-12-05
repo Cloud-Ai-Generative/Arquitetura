@@ -1,4 +1,4 @@
-*[← Voltar ao Guia Anterior](./computacao-nuvem.md*
+*[← Voltar ao Guia Anterior](./computacao-nuvem.md*)
 
 📋 O que é?  
 
