@@ -5,4 +5,15 @@
 - [Arquitetura de Software](arq-sof/arquitetura-software.md)
 - [Arquiteturas de Sistemas](arq-sis/arquitetura-sistemas.md)
 
+Perfis mais comuns de arquitetos em 2025
+
+| Tipo                        | Foco principal                                   | Onde mais aparece                     |
+|-----------------------------|--------------------------------------------------|---------------------------------------|
+| **Application Architect**   | Arquitetura de aplicações específicas            | Startups, produtos digitais           |
+| **Solution Architect**      | Solução completa (multi-sistemas + negócio)      | Consultorias, bancos, varejo grande   |
+| **Enterprise Architect**    | Visão corporativa corporativa, alinhamento estratégico | Empresas com 1000+ funcionários       |
+| **Cloud Architect**         | Especialista em AWS/Azure/GCP/multi-cloud        | Empresas cloud-native                 |
+| **Domain Architect**        | Domínio específico (pagamentos, risco, fraude)   | Fintechs, healthtechs                |
+
+
 
