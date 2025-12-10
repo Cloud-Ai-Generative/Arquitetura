@@ -2,4 +2,4 @@
 - [☁️ O que é?](./comp-nuvem-definicao.md)
 - [📊 ☁️ Arquitetura Multi-Cloud](./arq-multi-definicao.md)
   - [🏗️ Exemplo de Arquitetura Multi-Cloud](./exemplo-arq-multi-cloud.md)
-  - [Comparação de Serviços de Nuvem](./images/cloud-comparison.png)
+  - ![Comparação de Serviços de Nuvem](./images/cloud-comparison.png)
